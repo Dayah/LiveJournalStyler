@@ -1,0 +1,58 @@
+<html>
+ <head>
+  <title>Use others' public styles</title>
+  <script type="text/javascript" src="md5.js"></script>
+</head>
+
+<body>
+<h1>Use this form to select others' public styles</h1>
+<h2 style="background-color: yellow;">Warning: Using this form will cause you to lose your overrides and currently selected mood icons. You will have to modify your journal and reenter these.</h2>
+ <form method=post action="http://www.livejournal.com/modify_do.bml">
+<INPUT TYPE=HIDDEN NAME=mode VALUE=domodify>
+<p><strong>Your username and password will not be sent to me or my server.</strong> This form submits directly to LiveJournal. Your password is <strong>not</strong> sent in plain text. Password hashing is done on the client side. In other words, using this form is as secure as if it were on LiveJournal's servers</p>
+
+Username: <INPUT TYPE=text NAME=user><br>
+Password: <INPUT TYPE=text NAME=hpassword>
+<P><span class="heading2">Page Layout Style</span><br><UL><TABLE><TR BGCOLOR=#D0D0D0><TD></TD><TD>Available Styles</TD></TR>
+<TR><TD BGCOLOR=#D0D0D0>Most Recent Events</TD><TD><input type="text" NAME="s1_lastn_style" value="72669"></TD></TR>
+<TR><TD BGCOLOR=#D0D0D0>Friends View</TD><TD><input type="text" NAME="s1_friends_style" value="72670"></TD></TR>
+<TR><TD BGCOLOR=#D0D0D0>Calendar</TD><TD><input type="text" NAME="s1_calendar_style" value="72667"></TD></TR>
+<TR><TD BGCOLOR=#D0D0D0>Day View</TD><TD><input type="text" NAME="s1_day_style" value="72668"></TD></TR>
+</TABLE></UL>
+<P><span class="heading2">Color Theme</span>
+<UL>
+<INPUT TYPE=RADIO VALUE="default" NAME=themetype > <B>Default Theme</B>: <SELECT NAME=themeid>
+  <OPTION VALUE=4 >Black on White w/ light grays
+  <OPTION VALUE=11 >Blues
+  <OPTION VALUE=3 >Bumblebee
+  <OPTION VALUE=8 >Foresty Nature Kinda
+  <OPTION VALUE=7 >Leprechaun
+  <OPTION VALUE=12 >MysticBlue
+  <OPTION VALUE=10 >Pink & Gray
+  <OPTION VALUE=1 >Soft Blues and White (Classic)
+  <OPTION VALUE=9 >Supernova
+  <OPTION VALUE=6 >Valentine's Day
+  <OPTION VALUE=13 >Watermelon
+  <OPTION VALUE=5 >White on Black w/ dark grays
+  <OPTION VALUE=2 >Yellow/Green Pastels
+</SELECT><BR>
+<INPUT TYPE=RADIO VALUE="custom" NAME=themetype CHECKED> <B>Custom Colors</B>:<P><CENTER><TABLE BORDER=1 CELLPADDING=2>
+<TR VALIGN=TOP BGCOLOR=#D0D0D0><TD ALIGN=RIGHT><B>Usage Area</B></TD><TD><B>Color</B><BR><FONT SIZE=-1>(#rrggbb or name)</FONT></TD></TR>
+<TR><TD ALIGN=RIGHT>Page background</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_back" SIZE=20 MAXLENGTH=30 VALUE="white"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page text</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_text" SIZE=20 MAXLENGTH=30 VALUE="black"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page link</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_link" SIZE=20 MAXLENGTH=30 VALUE="blue"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page visited link</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_vlink" SIZE=20 MAXLENGTH=30 VALUE="purple"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page active link</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_alink" SIZE=20 MAXLENGTH=30 VALUE="red"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page emphasized text</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_text_em" SIZE=20 MAXLENGTH=30 VALUE="gray"></TD></TR>
+<TR><TD ALIGN=RIGHT>Page title</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:page_text_title" SIZE=20 MAXLENGTH=30 VALUE="black"></TD></TR>
+<TR><TD ALIGN=RIGHT>Weak accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:weak_back" SIZE=20 MAXLENGTH=30 VALUE="white"></TD></TR>
+<TR><TD ALIGN=RIGHT>Text on weak accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:weak_text" SIZE=20 MAXLENGTH=30 VALUE="gray"></TD></TR>
+<TR><TD ALIGN=RIGHT>Strong accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:strong_back" SIZE=20 MAXLENGTH=30 VALUE="white"></TD></TR>
+<TR><TD ALIGN=RIGHT>Text on strong accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:strong_text" SIZE=20 MAXLENGTH=30 VALUE="black"></TD></TR>
+<TR><TD ALIGN=RIGHT>Stronger accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:stronger_back" SIZE=20 MAXLENGTH=30 VALUE="black"></TD></TR>
+<TR><TD ALIGN=RIGHT>Text on stronger accent</TD><TD><INPUT TYPE=TEXT NAME="theme_cust:stronger_text" SIZE=20 MAXLENGTH=30 VALUE="black"></TD></TR>
+</TABLE></CENTER>
+</UL>
+<INPUT TYPE=SUBMIT VALUE="Save Changes" onClick="document.forms[0].hpassword.value = calcMD5(document.forms[0].hpassword.value);">
+</FORM>
+</body></html>
